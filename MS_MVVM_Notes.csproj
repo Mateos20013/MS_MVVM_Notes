@@ -64,13 +64,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\AboutPage.xaml">
+	  <Compile Update="Views\MS_AllNotesPage.xaml.cs">
+	    <DependentUpon>MS_AllNotesPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MS_AboutPage.xaml.cs">
+	    <DependentUpon>MS_AboutPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\MS_NotePage.xaml.cs">
+	    <DependentUpon>MS_NotePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\MS_AboutPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\AllNotesPage.xaml">
+	  <MauiXaml Update="Views\MS_AllNotesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\NotePage.xaml">
+	  <MauiXaml Update="Views\MS_NotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

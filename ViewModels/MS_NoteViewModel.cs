@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Notes.ViewModels;
 
-internal class NoteViewModel : ObservableObject, IQueryAttributable
+internal class MS_NoteViewModel : ObservableObject, IQueryAttributable
 {
     private Models.Note _note;
 
@@ -28,14 +28,14 @@ internal class NoteViewModel : ObservableObject, IQueryAttributable
     public ICommand SaveCommand { get; private set; }
     public ICommand DeleteCommand { get; private set; }
 
-    public NoteViewModel()
+    public MS_NoteViewModel()
     {
         _note = new Models.Note();
         SaveCommand = new AsyncRelayCommand(Save);
         DeleteCommand = new AsyncRelayCommand(Delete);
     }
 
-    public NoteViewModel(Models.Note note)
+    public MS_NoteViewModel(Models.Note note)
     {
         _note = note;
         SaveCommand = new AsyncRelayCommand(Save);

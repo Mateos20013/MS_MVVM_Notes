@@ -2,19 +2,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:Notes.ViewModels"
              x:Class="Notes.Views.AllNotesPage"
-             Title="Your Notes"
+             Title="Mis Notas"
              NavigatedTo="ContentPage_NavigatedTo">
     <ContentPage.BindingContext>
-        <viewModels:NotesViewModel />
+        <viewModels:MS_NotesViewModel />
     </ContentPage.BindingContext>
 
     <!-- Add an item to the toolbar -->
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding NewCommand}" IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
+        <ToolbarItem x:Name="MS_Toolbar" Text="Add" Command="{Binding NewCommand}" IconImageSource="{FontImage Glyph='+', Color=Black, Size=22}" />
     </ContentPage.ToolbarItems>
 
     <!-- Display notes in a list -->
-    <CollectionView x:Name="notesCollection"
+    <CollectionView x:Name="MS_notesCollection"
                     ItemsSource="{Binding AllNotes}"
                     Margin="20"
                     SelectionMode="Single"
@@ -30,8 +30,8 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout BackgroundColor="Silver">
-                    <Label Style="{StaticResource MSGreenLabel}" Text="{Binding Text}" FontSize="22"/>
-                    <Label Style="{StaticResource MSGreenLabel}" Text="{Binding Date}" FontSize="14" />
+                    <Label x:Name="MS_Label" Style="{StaticResource MSCustomLabel}" Text="{Binding Text}" FontSize="22"/>
+                    <Label x:Name="MS_Label1" Style="{StaticResource MSGreenLabel}" Text="{Binding Date}" FontSize="14" />
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
