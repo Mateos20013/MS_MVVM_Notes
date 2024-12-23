@@ -11,11 +11,11 @@
             <Image Source="dotnet_bot.png"
                    SemanticProperties.Description="The dot net bot waving hello!"
                    HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
-            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
+            <Label  Style="{StaticResource MSCustomLabel}" Text="{Binding Title}" VerticalOptions="End" />
+            <Label Style="{StaticResource MSCustomLabel}"  Text="{Binding Version}" VerticalOptions="End" />
         </HorizontalStackLayout>
 
-        <Label Text="{Binding Message}" />
+        <Label Style="{StaticResource MSGreenLabel}" Text="{Binding Message}" />
         <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
     </VerticalStackLayout>
 

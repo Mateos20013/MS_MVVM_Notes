@@ -423,4 +423,33 @@
         <Setter Property="SelectedTabColor" Value="{AppThemeBinding Light={StaticResource Gray950}, Dark={StaticResource Gray200}}" />
     </Style>
 
+    <!--  Botones -->
+    <Style TargetType="Button" x:Key="MSCustomButton">
+        <Setter Property="BackgroundColor" Value="Beige" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="Padding" Value="16,10" />
+        <Setter Property="BorderWidth" Value="2" />
+        <Setter Property="BorderColor" Value="Black" />
+    </Style>
+
+    <!--  Labels -->
+    <Style TargetType="Label" x:Key="MSCustomLabel">
+        <Setter Property="TextColor" Value="LightBlue" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+    <!-- Estilo adicional para Label-->
+    <Style TargetType="Label" x:Key="MSGreenLabel">
+        <Setter Property="TextColor" Value="Green" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="HorizontalOptions" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+    </Style>
+
 </ResourceDictionary>
